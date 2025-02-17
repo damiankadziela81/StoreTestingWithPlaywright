@@ -1,6 +1,7 @@
 package org.example.tests;
 
 import com.microsoft.playwright.*;
+import org.example.factory.BrowserFactory;
 import org.example.utils.Properties;
 import org.example.utils.StringUtils;
 import org.junit.jupiter.api.*;
@@ -9,20 +10,18 @@ import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class BaseTest {
 
-    public static Playwright pw;
-    protected static Browser browser;
-
+    private BrowserFactory browserFactory;
+    private Browser browser;
     protected BrowserContext browserContext;
     protected Page page;
 
     @BeforeAll
-    static void launchBrowser() {
-        pw = Playwright.create();
-        browser = pw.chromium().launch(new BrowserType.LaunchOptions()
-                .setHeadless(Boolean.parseBoolean(Properties.getProperty("browser.headless")))
-                .setSlowMo(Integer.parseInt(Properties.getProperty("browser.slow.mo"))));
+    void launchBrowser() {
+        browserFactory = new BrowserFactory();
+        browser = browserFactory.getBrowser();
     }
 
     @BeforeEach
@@ -54,8 +53,8 @@ class BaseTest {
     }
 
     @AfterAll
-    static void closeBrowser() {
-        pw.close();
+    void closeBrowser() {
+        browserFactory.getPlaywright().close();
     }
 
     private boolean isTracingEnabled() {

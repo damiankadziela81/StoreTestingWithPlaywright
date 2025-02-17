@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee49d022-5e5d-4ebb-8f1f-badbd192b072" name="Changes" comment="Add POP representation and 1st simple test">
+    <list default="true" id="ee49d022-5e5d-4ebb-8f1f-badbd192b072" name="Changes" comment="Add more tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/tests/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/SearchTest.java" afterDir="false" />
     </list>
@@ -40,7 +40,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.SearchTest.shouldReturnProductsBySearchNameTshirt">
+  <component name="RunManager" selected="JUnit.SearchTest.shouldReturnProductsByProductName (1)">
     <configuration name="SearchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StoreTestingWithPlaywright" />
       <extension name="coverage">
@@ -52,6 +52,22 @@
       <option name="PACKAGE_NAME" value="org.example.tests" />
       <option name="MAIN_CLASS_NAME" value="org.example.tests.SearchTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearchTest.shouldReturnProductsByProductName (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StoreTestingWithPlaywright" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.tests" />
+      <option name="MAIN_CLASS_NAME" value="org.example.tests.SearchTest" />
+      <option name="METHOD_NAME" value="shouldReturnProductsByProductName(java.lang.String,int)" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -106,6 +122,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SearchTest.shouldReturnProductsByProductName (1)" />
         <item itemvalue="JUnit.SearchTest.shouldReturnProductsBySearchNameTshirt" />
         <item itemvalue="JUnit.SearchTest.shouldReturnProductsByProductName" />
         <item itemvalue="JUnit.SearchTest" />
@@ -143,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1739783813405</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add more tests">
+      <created>1739784471561</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1739784471561</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -161,6 +185,7 @@
     <MESSAGE value="Init commit" />
     <MESSAGE value="Add tracing" />
     <MESSAGE value="Add POP representation and 1st simple test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add POP representation and 1st simple test" />
+    <MESSAGE value="Add more tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add more tests" />
   </component>
 </project>

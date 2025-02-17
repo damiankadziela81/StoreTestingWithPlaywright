@@ -20,6 +20,7 @@ class SearchTest extends BaseTest{
     void beforeEach() {
         homePage = new HomePage(page);
         page.navigate(Properties.getProperty("app.url"));
+        homePage.getTopNavigationSection().setPageLanguageToEN();
     }
 
     @DisplayName("Search for products")
@@ -34,7 +35,9 @@ class SearchTest extends BaseTest{
         return Stream.of(
                 Arguments.of("mug", 5),
                 Arguments.of("t-shirt", 1),
-                Arguments.of("frame", 4)
+                Arguments.of("frame", 4),
+                Arguments.of("notebook", 3),
+                Arguments.of("graphics", 3)
         );
     }
 }

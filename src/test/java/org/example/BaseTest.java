@@ -1,10 +1,11 @@
 package org.example;
 
 import com.microsoft.playwright.*;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
+import org.example.utils.StringUtils;
+import org.junit.jupiter.api.*;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 class BaseTest {
 
@@ -25,12 +26,22 @@ class BaseTest {
     @BeforeEach
     void createContextAndPage() {
         browserContext = browser.newContext();
+
+        browserContext.tracing().start(new Tracing.StartOptions()
+                .setScreenshots(true)
+                .setSnapshots(true)
+                .setSources(true));
+
         page = browserContext.newPage();
         page.setViewportSize(1920,1080);
     }
 
     @AfterEach
-    void closeContext() {
+    void closeContext(TestInfo testInfo) {
+        String traceName = "traces/trace_"
+                + StringUtils.removeParentheses(testInfo.getDisplayName()) + "_"
+                + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss")) + ".zip";
+
         browserContext.close();
     }
 

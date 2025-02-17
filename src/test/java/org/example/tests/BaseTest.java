@@ -1,4 +1,4 @@
-package org.example;
+package org.example.tests;
 
 import com.microsoft.playwright.*;
 import org.example.utils.StringUtils;
@@ -27,10 +27,10 @@ class BaseTest {
     void createContextAndPage() {
         browserContext = browser.newContext();
 
-        browserContext.tracing().start(new Tracing.StartOptions()
-                .setScreenshots(true)
-                .setSnapshots(true)
-                .setSources(true));
+//        browserContext.tracing().start(new Tracing.StartOptions()
+//                .setScreenshots(true)
+//                .setSnapshots(true)
+//                .setSources(true));
 
         page = browserContext.newPage();
         page.setViewportSize(1920,1080);
@@ -38,9 +38,9 @@ class BaseTest {
 
     @AfterEach
     void closeContext(TestInfo testInfo) {
-        String traceName = "traces/trace_"
-                + StringUtils.removeParentheses(testInfo.getDisplayName()) + "_"
-                + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss")) + ".zip";
+//        String traceName = "traces/trace_"
+//                + StringUtils.removeParentheses(testInfo.getDisplayName()) + "_"
+//                + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss")) + ".zip";
 
         browserContext.close();
     }

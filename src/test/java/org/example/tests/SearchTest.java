@@ -3,6 +3,7 @@ package org.example.tests;
 import org.assertj.core.api.Assertions;
 import org.example.pages.HomePage;
 import org.example.pages.SearchResultPage;
+import org.example.utils.Properties;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -18,7 +19,7 @@ class SearchTest extends BaseTest{
     @BeforeEach
     void beforeEach() {
         homePage = new HomePage(page);
-        page.navigate("https://skleptestera.pl");
+        page.navigate(Properties.getProperty("app.url"));
     }
 
     @DisplayName("Search for products")

@@ -21,12 +21,19 @@ class FilterByPriceTest extends BaseTest{
     @Test
     void shouldReturnProductsWithPriceGreaterThan40() {
         ArtPage artPage = homePage.getTopMenuAndSearchSection().clickArtLink();
-//        System.out.println(artPage.getProductsSection().getProductPrices());
-        String newUrl = page.url() + "&q=Price-z%C5%82-40-44";
+        String newUrl = page.url() + "&q=Price-z%C5%82-40-44"; // adding query param to url hack
         page.navigate(newUrl);
-//        System.out.println(artPage.getProductsSection().getProductPrices());
         Assertions.assertThat(artPage.getProductsSection().getProductPrices().stream()
                 .allMatch(p -> p > 40)).isTrue();
-
     }
+
+    @Test
+    void shouldReturnProductsWithPriceGreaterThan40WithSlider() {
+        ArtPage artPage = homePage.getTopMenuAndSearchSection().clickArtLink();
+        artPage.getFilterBySection().filterProductsByPriceWithMouse(40.0);
+        page.waitForTimeout(3000);
+        Assertions.assertThat(artPage.getProductsSection().getProductPrices().stream()
+                .allMatch(p -> p > 40)).isTrue();
+    }
+
 }

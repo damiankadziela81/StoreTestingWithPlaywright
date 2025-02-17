@@ -3,7 +3,7 @@ package org.example.pages;
 import com.microsoft.playwright.Page;
 import lombok.Getter;
 import org.example.pages.sections.TopMenuAndSearchSection;
-import org.example.pages.sections.searchResultsPage.TopNavigationSection;
+import org.example.pages.sections.TopNavigationSection;
 
 @Getter
 public class HomePage {

@@ -1,4 +1,4 @@
-package org.example.pages.sections.searchResultsPage;
+package org.example.pages.sections;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;

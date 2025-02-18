@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee49d022-5e5d-4ebb-8f1f-badbd192b072" name="Changes" comment="Add new test - filter price with mouse">
+    <list default="true" id="ee49d022-5e5d-4ebb-8f1f-badbd192b072" name="Changes" comment="Add new test - filter price with keyboard">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/FilterByCompositionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/products/FilterBySection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/products/FilterBySection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/tests/FilterByPriceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/FilterByPriceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,16 +41,19 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.FilterByPriceTest.shouldReturnProductsWithPriceGreaterThan40WithKeyboard">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+  <component name="RunManager" selected="JUnit.FilterByCompositionTest.shouldReturn3ProductsWithMattPaperComposition">
+    <configuration name="FilterByCompositionTest.shouldReturn3ProductsWithMattPaperComposition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StoreTestingWithPlaywright" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="org.example.tests" />
+      <option name="MAIN_CLASS_NAME" value="org.example.tests.FilterByCompositionTest" />
+      <option name="METHOD_NAME" value="shouldReturn3ProductsWithMattPaperComposition" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FilterByCompositionTest.shouldReturn3ProductsWithMattPaperComposition" />
         <item itemvalue="JUnit.FilterByPriceTest.shouldReturnProductsWithPriceGreaterThan40WithKeyboard" />
         <item itemvalue="JUnit.FilterByPriceTest" />
         <item itemvalue="JUnit.FilterByPriceTest.shouldReturnProductsWithPriceGreaterThan40WithSlider" />
         <item itemvalue="JUnit.FilterByPriceTest.shouldReturnProductsWithPriceGreaterThan40" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -221,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1739806807285</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add new test - filter price with keyboard">
+      <created>1739872957166</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1739872957166</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,6 +258,7 @@
     <MESSAGE value="Add browser factory, browser selected through properties" />
     <MESSAGE value="Add new test" />
     <MESSAGE value="Add new test - filter price with mouse" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add new test - filter price with mouse" />
+    <MESSAGE value="Add new test - filter price with keyboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new test - filter price with keyboard" />
   </component>
 </project>

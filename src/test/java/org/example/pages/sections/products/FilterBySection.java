@@ -2,6 +2,8 @@ package org.example.pages.sections.products;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.AriaRole;
+import org.example.pages.ArtPage;
 
 import java.util.Arrays;
 
@@ -11,12 +13,14 @@ public class FilterBySection {
 
     private Locator leftHandleSlider;
     private Locator priceFilter;
+    private Locator compositionCheckbox;
 
 
     public FilterBySection(Page page) {
         this.page = page;
         this.leftHandleSlider = page.locator(".ui-slider-handle").first();
         this.priceFilter = page.locator("#search_filters li p");
+        this.compositionCheckbox = page.getByRole(AriaRole.CHECKBOX,new Page.GetByRoleOptions().setName("Matt paper"));
     }
 
     public void showLeftSlider() {
@@ -50,6 +54,12 @@ public class FilterBySection {
             leftHandleSlider.press("ArrowRight");
             page.waitForCondition(() -> page.locator(".overlay__inner").isHidden());
         }
+    }
+
+    public ArtPage filterByComposition() {
+        compositionCheckbox.click();
+        page.waitForCondition(() -> page.locator(".overlay__inner").isHidden());
+        return new ArtPage(page); // to "reload" products in PLP
     }
 
     private Double getParsedFilteredPriceValue() {

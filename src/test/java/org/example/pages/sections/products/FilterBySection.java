@@ -4,6 +4,7 @@ import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;
 import org.example.pages.ArtPage;
+import org.example.utils.StringUtils;
 
 import java.util.Arrays;
 
@@ -65,7 +66,7 @@ public class FilterBySection {
     private Double getParsedFilteredPriceValue() {
         return Arrays.asList(page.locator("#search_filters li p").innerText().split(" "))
                 .stream()
-                .map(p -> p.replaceAll("zł",""))
+                .map(p -> p.replaceAll(StringUtils.toUTF8("zł"),""))
                 .map(Double::parseDouble)
                 .findFirst()
                 .orElseThrow(() -> new IllegalStateException("Invalid price format"));

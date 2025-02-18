@@ -3,6 +3,7 @@ package org.example.pages.sections.products;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import lombok.Getter;
+import org.example.utils.StringUtils;
 
 import java.util.List;
 
@@ -25,7 +26,7 @@ public class ProductsSection {
     public List<Double> getProductPrices() {
         return getProductPricesText()
                 .stream()
-                .map(p -> p.replaceAll("zł",""))
+                .map(p -> p.replaceAll(StringUtils.toUTF8("zł"),""))
                 .map(Double::parseDouble)
                 .toList();
     }

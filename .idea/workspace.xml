@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee49d022-5e5d-4ebb-8f1f-badbd192b072" name="Changes" comment="Add new test">
+    <list default="true" id="ee49d022-5e5d-4ebb-8f1f-badbd192b072" name="Changes" comment="Add new test - filter price with mouse">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pages/ArtPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/ArtPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/products/FilterBySection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/products/FilterBySection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/tests/FilterByPriceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/FilterByPriceTest.java" afterDir="false" />
     </list>
@@ -36,13 +35,13 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="JUnit.FilterByPriceTest.shouldReturnProductsWithPriceGreaterThan40WithSlider">
+}</component>
+  <component name="RunManager" selected="JUnit.FilterByPriceTest.shouldReturnProductsWithPriceGreaterThan40WithKeyboard">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="StoreTestingWithPlaywright" />
@@ -52,6 +51,21 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FilterByPriceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StoreTestingWithPlaywright" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.tests" />
+      <option name="MAIN_CLASS_NAME" value="org.example.tests.FilterByPriceTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -67,6 +81,22 @@
       <option name="PACKAGE_NAME" value="org.example.tests" />
       <option name="MAIN_CLASS_NAME" value="org.example.tests.FilterByPriceTest" />
       <option name="METHOD_NAME" value="shouldReturnProductsWithPriceGreaterThan40" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FilterByPriceTest.shouldReturnProductsWithPriceGreaterThan40WithKeyboard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StoreTestingWithPlaywright" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.tests" />
+      <option name="MAIN_CLASS_NAME" value="org.example.tests.FilterByPriceTest" />
+      <option name="METHOD_NAME" value="shouldReturnProductsWithPriceGreaterThan40WithKeyboard" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -88,45 +118,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchTest.shouldReturnProductsByProductName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="StoreTestingWithPlaywright" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="org.example.tests.SearchTest" />
-      <option name="METHOD_NAME" value="shouldReturnProductsByProductName(java.lang.String,int)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SearchTest.shouldReturnProductsBySearchNameTshirt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="StoreTestingWithPlaywright" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="org.example.tests.SearchTest" />
-      <option name="METHOD_NAME" value="shouldReturnProductsBySearchNameTshirt" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FilterByPriceTest.shouldReturnProductsWithPriceGreaterThan40WithKeyboard" />
+        <item itemvalue="JUnit.FilterByPriceTest" />
         <item itemvalue="JUnit.FilterByPriceTest.shouldReturnProductsWithPriceGreaterThan40WithSlider" />
         <item itemvalue="JUnit.FilterByPriceTest.shouldReturnProductsWithPriceGreaterThan40" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.SearchTest.shouldReturnProductsByProductName (1)" />
-        <item itemvalue="JUnit.SearchTest.shouldReturnProductsBySearchNameTshirt" />
       </list>
     </recent_temporary>
   </component>
@@ -216,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1739802074304</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add new test - filter price with mouse">
+      <created>1739806807285</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1739806807285</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -242,6 +247,7 @@
     <MESSAGE value="Add english language selection on page" />
     <MESSAGE value="Add browser factory, browser selected through properties" />
     <MESSAGE value="Add new test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add new test" />
+    <MESSAGE value="Add new test - filter price with mouse" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new test - filter price with mouse" />
   </component>
 </project>

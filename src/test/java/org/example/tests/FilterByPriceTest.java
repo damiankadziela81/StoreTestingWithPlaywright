@@ -19,7 +19,7 @@ class FilterByPriceTest extends BaseTest{
     }
 
     @Test
-    void shouldReturnProductsWithPriceGreaterThan40() {
+    void shouldReturnProductsWithPriceGreaterThan40WithUrl() {
         ArtPage artPage = homePage.getTopMenuAndSearchSection().clickArtLink();
         String newUrl = page.url() + "&q=Price-z%C5%82-40-44"; // adding query param to url hack
         page.navigate(newUrl);
@@ -28,12 +28,20 @@ class FilterByPriceTest extends BaseTest{
     }
 
     @Test
-    void shouldReturnProductsWithPriceGreaterThan40WithSlider() {
+    void shouldReturnProductsWithPriceGreaterThan40WithMouse() {
         ArtPage artPage = homePage.getTopMenuAndSearchSection().clickArtLink();
-        artPage.getFilterBySection().filterProductsByPriceWithMouse(40.0);
+        artPage.getFilterBySection().filterProductsByPriceWithMouse(30.0);
+        Assertions.assertThat(artPage.getProductsSection().getProductPrices().stream()
+                .allMatch(p -> p > 30)).isTrue();
+    }
+
+    @Test
+    void shouldReturnProductsWithPriceGreaterThan40WithKeyboard() {
+        ArtPage artPage = homePage.getTopMenuAndSearchSection().clickArtLink();
+        artPage.getFilterBySection().filterProductsByPriceWithKeyboard(25.0);
         page.waitForTimeout(3000);
         Assertions.assertThat(artPage.getProductsSection().getProductPrices().stream()
-                .allMatch(p -> p > 40)).isTrue();
+                .allMatch(p -> p > 25)).isTrue();
     }
 
 }

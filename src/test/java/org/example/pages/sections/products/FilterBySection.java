@@ -42,7 +42,14 @@ public class FilterBySection {
             page.mouse().up();
             page.waitForCondition(() -> page.locator(".overlay__inner").isHidden());
         }
+    }
 
+    public void filterProductsByPriceWithKeyboard(double fromPrice) {
+
+        while (fromPrice > getParsedFilteredPriceValue()) {
+            leftHandleSlider.press("ArrowRight");
+            page.waitForCondition(() -> page.locator(".overlay__inner").isHidden());
+        }
     }
 
     private Double getParsedFilteredPriceValue() {

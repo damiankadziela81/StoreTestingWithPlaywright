@@ -15,4 +15,8 @@ public class ShoppingCartPage extends BasePage{
         PageUtils.waitForPageToLoad(page);
         this.purchaseSummarySection = new PurchaseSummarySection(page);
     }
+
+    public OrderDetailsPage proceedToCheckoutOnShoppingCartPage() {
+        return getPurchaseSummarySection().proceedToCheckout();
+    }
 }

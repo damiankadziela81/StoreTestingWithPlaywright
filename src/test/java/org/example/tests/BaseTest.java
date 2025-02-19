@@ -37,6 +37,7 @@ class BaseTest {
 
         page = browserContext.newPage();
         page.setViewportSize(1920,1080);
+        page.navigate(Properties.getProperty("app.url"));
     }
 
     @AfterEach

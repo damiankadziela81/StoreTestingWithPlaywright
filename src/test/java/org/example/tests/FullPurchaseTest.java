@@ -6,7 +6,6 @@ import org.example.pages.modals.AddToCartConfirmationModalPage;
 import org.example.pages.sections.orderDetailsPage.OrderAddressSection;
 import org.example.pages.sections.orderDetailsPage.OrderPaymentSection;
 import org.example.pages.sections.orderDetailsPage.OrderShippingSection;
-import org.example.utils.Properties;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -14,23 +13,23 @@ class FullPurchaseTest extends BaseTest{
 
     private HomePage homePage;
 
+    private final String productName = "Customizable Mug";
+
     @BeforeEach
     void beforeEach() {
         homePage = new HomePage(page);
-        page.navigate(Properties.getProperty("app.url"));
-        homePage.getTopNavigationSection().setPageLanguageToEN();
     }
 
     @Test
     void shouldPurchaseSelectedProductTest() {
-        SearchResultPage searchResultPage = homePage.getTopMenuAndSearchSection().searchForProducts("Customizable Mug");
-        ProductDetailsPage productDetailsPage = searchResultPage.getSearchResultsSection().viewProductDetails("Customizable Mug");
-        productDetailsPage.getProductCustomizationSection().customizeProduct("Customizable Mug");
+        SearchResultPage searchResultPage = homePage.getTopMenuAndSearchSection().searchForProducts(productName);
+        ProductDetailsPage productDetailsPage = searchResultPage.getSearchResultsSection().viewProductDetails(productName);
+        productDetailsPage.getProductCustomizationSection().customizeProduct(productName);
         AddToCartConfirmationModalPage confirmationModal = productDetailsPage.getAddToCartSection().addProductToCart();
 
         Assertions.assertThat(confirmationModal.getConfirmationMessage()).contains("Product successfully added to your shopping cart");
 
-        ShoppingCartPage shoppingCartPage = confirmationModal.clickCheckoutButton();
+        ShoppingCartPage shoppingCartPage = confirmationModal.proceedToCheckoutOnModal();
         OrderDetailsPage orderDetailsPage = shoppingCartPage.getPurchaseSummarySection().proceedToCheckout();
 
         OrderAddressSection orderAddressSection = orderDetailsPage.getOrderPersonalInformationSection().fillOrderForm();
@@ -41,7 +40,26 @@ class FullPurchaseTest extends BaseTest{
         Assertions.assertThat(orderConfirmationPage.getOrderConfirmationDetailsSection()
                 .getConfirmationTitle()).containsIgnoringCase("your order is confirmed");
 
-        page.waitForTimeout(3000);
-
     }
+
+    @Test
+    void shouldPurchaseSelectedProductTestV2() {
+        AddToCartConfirmationModalPage confirmationModal = homePage
+                .searchForProduct(productName)
+                .viewProductDetails(productName)
+                .customizeProduct(productName)
+                .addProductToCart();
+
+        Assertions.assertThat(confirmationModal.getConfirmationMessage()).contains("Product successfully added to your shopping cart");
+
+        OrderConfirmationPage orderConfirmationPage = confirmationModal
+                .proceedToCheckoutOnModal()
+                .proceedToCheckoutOnShoppingCartPage()
+                .enterOrderDetails();
+
+        Assertions.assertThat(orderConfirmationPage.getOrderConfirmationDetailsSection()
+                .getConfirmationTitle()).containsIgnoringCase("your order is confirmed");
+    }
+
+
 }

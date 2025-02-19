@@ -19,4 +19,12 @@ public class OrderDetailsPage extends BasePage{
         this.orderPersonalInformationSection = new OrderPersonalInformationSection(page);
         this.orderAddressSection = new OrderAddressSection(page);
     }
+
+    public OrderConfirmationPage enterOrderDetails() {
+        return orderPersonalInformationSection
+                .fillOrderForm()
+                .enterAddress()
+                .selectShippingMethod()
+                .placeOrder();
+    }
 }

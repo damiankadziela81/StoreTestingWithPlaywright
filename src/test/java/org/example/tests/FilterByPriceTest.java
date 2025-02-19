@@ -3,7 +3,6 @@ package org.example.tests;
 import org.assertj.core.api.Assertions;
 import org.example.pages.ArtPage;
 import org.example.pages.HomePage;
-import org.example.utils.Properties;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -14,8 +13,6 @@ class FilterByPriceTest extends BaseTest{
     @BeforeEach
     void beforeEach() {
         homePage = new HomePage(page);
-        page.navigate(Properties.getProperty("app.url"));
-        homePage.getTopNavigationSection().setPageLanguageToEN();
     }
 
     @Test

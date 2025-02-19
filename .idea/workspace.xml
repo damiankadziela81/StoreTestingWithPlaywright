@@ -4,14 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee49d022-5e5d-4ebb-8f1f-badbd192b072" name="Changes" comment="Add random user data for input in e2e test">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/OrderConfirmationPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/orderConfirmationPage/OrderConfirmationDetailsSection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/orderDetailsPage/OrderPaymentSection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/orderDetailsPage/OrderShippingSection.java" afterDir="false" />
+    <list default="true" id="ee49d022-5e5d-4ebb-8f1f-badbd192b072" name="Changes" comment="Finalized e2e test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/orderDetailsPage/OrderAddressSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/orderDetailsPage/OrderAddressSection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pages/OrderDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/OrderDetailsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pages/ProductDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/ProductDetailsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pages/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/SearchResultPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pages/ShoppingCartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/ShoppingCartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pages/modals/AddToCartConfirmationModalPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/modals/AddToCartConfirmationModalPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/TopMenuAndSearchSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/TopMenuAndSearchSection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/TopNavigationSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/TopNavigationSection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/tests/FilterByCompositionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/FilterByCompositionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/tests/FilterByPriceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/FilterByPriceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/tests/FullPurchaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/FullPurchaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/tests/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/SearchTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,22 +101,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FilterByPriceTest.shouldReturnProductsWithPriceGreaterThan40WithSlider" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="StoreTestingWithPlaywright" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="org.example.tests.FilterByPriceTest" />
-      <option name="METHOD_NAME" value="shouldReturnProductsWithPriceGreaterThan40WithSlider" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FullPurchaseTest.shouldPurchaseSelectedProductTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StoreTestingWithPlaywright" />
       <extension name="coverage">
@@ -125,13 +117,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FullPurchaseTest.shouldPurchaseSelectedProductTestV2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StoreTestingWithPlaywright" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.tests" />
+      <option name="MAIN_CLASS_NAME" value="org.example.tests.FullPurchaseTest" />
+      <option name="METHOD_NAME" value="shouldPurchaseSelectedProductTestV2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.FullPurchaseTest.shouldPurchaseSelectedProductTest" />
+        <item itemvalue="JUnit.FullPurchaseTest.shouldPurchaseSelectedProductTestV2" />
         <item itemvalue="JUnit.FilterByCompositionTest.shouldReturn3ProductsWithMattPaperComposition" />
         <item itemvalue="JUnit.FilterByPriceTest.shouldReturnProductsWithPriceGreaterThan40WithKeyboard" />
         <item itemvalue="JUnit.FilterByPriceTest" />
-        <item itemvalue="JUnit.FilterByPriceTest.shouldReturnProductsWithPriceGreaterThan40WithSlider" />
       </list>
     </recent_temporary>
   </component>
@@ -263,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1739966330092</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Finalized e2e test">
+      <created>1739968474475</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1739968474475</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -295,6 +310,7 @@
     <MESSAGE value="Add UTF-8 encoding so polish chars will not cause errors when running tests with maven" />
     <MESSAGE value="Add new E2E test and code refactor - added BasePage" />
     <MESSAGE value="Add random user data for input in e2e test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add random user data for input in e2e test" />
+    <MESSAGE value="Finalized e2e test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finalized e2e test" />
   </component>
 </project>

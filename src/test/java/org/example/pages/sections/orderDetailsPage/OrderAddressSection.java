@@ -21,10 +21,12 @@ public class OrderAddressSection extends BasePage {
         this.continueButton = page.locator(addressSection + "button[name=confirm-addresses]");
     }
 
-    public void enterAddress() {
+    public OrderShippingSection enterAddress() {
         addressInput.fill("Beverly Hills");
         zipCode.fill("90-210");
         city.fill("LA");
         continueButton.click();
+
+        return new OrderShippingSection(page);
     }
 }

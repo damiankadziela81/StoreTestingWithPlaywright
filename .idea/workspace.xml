@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee49d022-5e5d-4ebb-8f1f-badbd192b072" name="Changes" comment="Add new E2E test and code refactor - added BasePage">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/UserInfoGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/orderDetailsPage/OrderAddressSection.java" afterDir="false" />
+    <list default="true" id="ee49d022-5e5d-4ebb-8f1f-badbd192b072" name="Changes" comment="Add random user data for input in e2e test">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/OrderConfirmationPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/orderConfirmationPage/OrderConfirmationDetailsSection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/orderDetailsPage/OrderPaymentSection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/orderDetailsPage/OrderShippingSection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/orderDetailsPage/OrderPersonalInformationSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/orderDetailsPage/OrderPersonalInformationSection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/orderDetailsPage/OrderAddressSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/orderDetailsPage/OrderAddressSection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/tests/FullPurchaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/FullPurchaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1739964748428</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add random user data for input in e2e test">
+      <created>1739966330092</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1739966330092</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -284,6 +294,7 @@
     <MESSAGE value="Add new test - filter by composition" />
     <MESSAGE value="Add UTF-8 encoding so polish chars will not cause errors when running tests with maven" />
     <MESSAGE value="Add new E2E test and code refactor - added BasePage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add new E2E test and code refactor - added BasePage" />
+    <MESSAGE value="Add random user data for input in e2e test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add random user data for input in e2e test" />
   </component>
 </project>

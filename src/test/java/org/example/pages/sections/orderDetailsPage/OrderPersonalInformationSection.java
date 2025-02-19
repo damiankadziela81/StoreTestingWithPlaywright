@@ -3,6 +3,7 @@ package org.example.pages.sections.orderDetailsPage;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import org.example.pages.BasePage;
+import org.example.utils.UserInfoGenerator;
 
 public class OrderPersonalInformationSection extends BasePage {
 
@@ -34,16 +35,18 @@ public class OrderPersonalInformationSection extends BasePage {
         this.continueButton = page.locator(customerForm + "button[name=continue]");
     }
 
-    public void fillOrderForm() {
+    public OrderAddressSection fillOrderForm() {
         selectSocialTitleMr()
-                .enterFirstName("Tom")
-                .enterLastName("Goodman")
-                .enterEmail("TG@gmail.com")
-                .enterPassword("Pass123!@#")
+                .enterFirstName(UserInfoGenerator.getRandomFirstName())
+                .enterLastName(UserInfoGenerator.getRandomLastName())
+                .enterEmail(UserInfoGenerator.getRandomEmail())
+                .enterPassword("Pass123!@#pa")
                 .enterDob("01/01/1980")
                 .checkTermsAndConditions()
                 .checkCustomerPrivacy()
                 .clickContinue();
+
+        return new OrderAddressSection(page);
     }
 
     private OrderPersonalInformationSection selectSocialTitleMr() {

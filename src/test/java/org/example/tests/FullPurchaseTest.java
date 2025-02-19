@@ -3,6 +3,7 @@ package org.example.tests;
 import org.assertj.core.api.Assertions;
 import org.example.pages.*;
 import org.example.pages.modals.AddToCartConfirmationModalPage;
+import org.example.pages.sections.orderDetailsPage.OrderAddressSection;
 import org.example.utils.Properties;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -27,7 +28,8 @@ class FullPurchaseTest extends BaseTest{
         Assertions.assertThat(confirmationModal.getConfirmationMessage()).contains("Product successfully added to your shopping cart");
         ShoppingCartPage shoppingCartPage = confirmationModal.clickCheckoutButton();
         OrderDetailsPage orderDetailsPage = shoppingCartPage.getPurchaseSummarySection().proceedToCheckout();
-        orderDetailsPage.getOrderPersonalInformationSection().fillOrderForm();
+        OrderAddressSection orderAddressSection = orderDetailsPage.getOrderPersonalInformationSection().fillOrderForm();
+        orderAddressSection.enterAddress();
         page.waitForTimeout(3000);
 
     }

@@ -4,27 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee49d022-5e5d-4ebb-8f1f-badbd192b072" name="Changes" comment="Add UTF-8 encoding so polish chars will not cause errors when running tests with maven">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/ProductDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/OrderDetailsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/ProductDetailsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/ShoppingCartPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/modals/AddToCartConfirmationModalPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/orderDetailsPage/OrderPersonalInformationSection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/productDetailPage/AddToCartSection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/productDetailPage/ProductCustomizationSection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/shoppingCartPage/PurchaseSummarySection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/FullPurchaseTest.java" afterDir="false" />
+    <list default="true" id="ee49d022-5e5d-4ebb-8f1f-badbd192b072" name="Changes" comment="Add new E2E test and code refactor - added BasePage">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/UserInfoGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/orderDetailsPage/OrderAddressSection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pages/ArtPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/ArtPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pages/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/SearchResultPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/TopMenuAndSearchSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/TopMenuAndSearchSection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/TopNavigationSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/TopNavigationSection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/products/FilterBySection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/products/FilterBySection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/products/ProductsSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/products/ProductsSection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/searchResultsPage/SearchResultsSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/searchResultsPage/SearchResultsSection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/orderDetailsPage/OrderPersonalInformationSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/sections/orderDetailsPage/OrderPersonalInformationSection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1739877646773</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Add new E2E test and code refactor - added BasePage">
+      <created>1739964748428</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1739964748428</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -292,6 +283,7 @@
     <MESSAGE value="Add new test - filter price with keyboard" />
     <MESSAGE value="Add new test - filter by composition" />
     <MESSAGE value="Add UTF-8 encoding so polish chars will not cause errors when running tests with maven" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add UTF-8 encoding so polish chars will not cause errors when running tests with maven" />
+    <MESSAGE value="Add new E2E test and code refactor - added BasePage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new E2E test and code refactor - added BasePage" />
   </component>
 </project>

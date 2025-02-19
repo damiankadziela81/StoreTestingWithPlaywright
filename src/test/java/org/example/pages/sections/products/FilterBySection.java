@@ -4,13 +4,13 @@ import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;
 import org.example.pages.ArtPage;
+import org.example.pages.BasePage;
 import org.example.utils.StringUtils;
 
 import java.util.Arrays;
 
-public class FilterBySection {
+public class FilterBySection extends BasePage {
 
-    private Page page;
 
     private Locator leftHandleSlider;
     private Locator priceFilter;
@@ -18,7 +18,7 @@ public class FilterBySection {
 
 
     public FilterBySection(Page page) {
-        this.page = page;
+        super(page);
         this.leftHandleSlider = page.locator(".ui-slider-handle").first();
         this.priceFilter = page.locator("#search_filters li p");
         this.compositionCheckbox = page.getByRole(AriaRole.CHECKBOX,new Page.GetByRoleOptions().setName("Matt paper"));

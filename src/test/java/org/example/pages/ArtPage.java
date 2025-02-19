@@ -7,7 +7,7 @@ import org.example.pages.sections.products.ProductsSection;
 import org.example.utils.PageUtils;
 
 @Getter
-public class ArtPage {
+public class ArtPage extends BasePage{
 
     private ProductsSection productsSection;
 
@@ -15,6 +15,7 @@ public class ArtPage {
 
 
     public ArtPage(Page page) {
+        super(page);
         PageUtils.waitForPageToLoad(page);
         this.productsSection = new ProductsSection(page);
         this.filterBySection = new FilterBySection(page);

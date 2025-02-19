@@ -3,19 +3,19 @@ package org.example.pages.sections.products;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import lombok.Getter;
+import org.example.pages.BasePage;
 import org.example.utils.StringUtils;
 
 import java.util.List;
 
-public class ProductsSection {
+public class ProductsSection extends BasePage {
 
-    private Page page;
 
     @Getter
     private List<Locator> products;
 
     public ProductsSection(Page page) {
-        this.page = page;
+        super(page);
         this.products = page.locator(".js-product").all();
     }
 

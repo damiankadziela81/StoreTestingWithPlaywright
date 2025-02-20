@@ -2,8 +2,8 @@ package org.example.pages;
 
 import com.microsoft.playwright.Page;
 import lombok.Getter;
-import org.example.pages.sections.TopMenuAndSearchSection;
-import org.example.pages.sections.TopNavigationSection;
+import org.example.pages.sections.common.TopMenuAndSearchSection;
+import org.example.pages.sections.common.TopNavigationSection;
 
 public class BasePage {
 

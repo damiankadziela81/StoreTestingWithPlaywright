@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee49d022-5e5d-4ebb-8f1f-badbd192b072" name="Changes" comment="Added e2e v3 test using facade DP">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/junit-platform.properties" afterDir="false" />
+    <list default="true" id="ee49d022-5e5d-4ebb-8f1f-badbd192b072" name="Changes" comment="Added junit-platform.properties to run tests in parallel">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/playwright.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/pages/OrderConfirmationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/pages/OrderConfirmationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/tests/FullPurchaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/tests/FullPurchaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1740043462161</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Added junit-platform.properties to run tests in parallel">
+      <created>1740044932565</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1740044932565</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -317,6 +322,7 @@
     <MESSAGE value="Finalized e2e test" />
     <MESSAGE value="Refactor to make e2e test (v2) more readable" />
     <MESSAGE value="Added e2e v3 test using facade DP" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added e2e v3 test using facade DP" />
+    <MESSAGE value="Added junit-platform.properties to run tests in parallel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added junit-platform.properties to run tests in parallel" />
   </component>
 </project>

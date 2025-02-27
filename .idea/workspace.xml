@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee49d022-5e5d-4ebb-8f1f-badbd192b072" name="Changes" comment="Added junit-platform.properties to run tests in parallel">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/playwright.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +39,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.FullPurchaseTest.shouldPurchaseSelectedProductTestV3">
+  <component name="RunManager" selected="JUnit.FilterByCompositionTest.shouldReturn3ProductsWithMattPaperComposition">
     <configuration name="FilterByCompositionTest.shouldReturn3ProductsWithMattPaperComposition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StoreTestingWithPlaywright" />
       <extension name="coverage">
@@ -123,10 +122,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FilterByCompositionTest.shouldReturn3ProductsWithMattPaperComposition" />
         <item itemvalue="JUnit.FullPurchaseTest.shouldPurchaseSelectedProductTestV3" />
         <item itemvalue="JUnit.FullPurchaseTest.shouldPurchaseSelectedProductTest" />
         <item itemvalue="JUnit.FullPurchaseTest.shouldPurchaseSelectedProductTestV2" />
-        <item itemvalue="JUnit.FilterByCompositionTest.shouldReturn3ProductsWithMattPaperComposition" />
         <item itemvalue="JUnit.FilterByPriceTest.shouldReturnProductsWithPriceGreaterThan40WithKeyboard" />
       </list>
     </recent_temporary>
